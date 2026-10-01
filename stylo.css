@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Header - Myinstants Red Header Style */
+.top-bar {
+    background-color: #e52d27;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.search-container {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 8px 12px 8px 35px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.search-container i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+/* Grid Area */
+.main-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.instants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 25px 15px;
+    justify-items: center;
+}
+
+/* Individual Instant Item */
+.instant-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+/* 3D Circular Button */
+.instant-btn {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    transition: transform 0.05s;
+    box-shadow: inset 0 3px 6px rgba(255, 255, 255, 0.4), 
+                0 6px 0px var(--btn-shadow), 
+                0 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+.instant-btn:active {
+    transform: translateY(4px);
+    box-shadow: inset 0 3px 6px rgba(255, 255, 255, 0.4), 
+                0 2px 0px var(--btn-shadow), 
+                0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Color Classes for Buttons */
+.btn-red {
+    background: radial-gradient(circle at 30% 30%, #ff5252, #c62828);
+    --btn-shadow: #8e0000;
+}
+
+.btn-green {
+    background: radial-gradient(circle at 30% 30%, #66bb6a, #2e7d32);
+    --btn-shadow: #1b5e20;
+}
+
+.btn-black {
+    background: radial-gradient(circle at 30% 30%, #424242, #111111);
+    --btn-shadow: #000000;
+}
+
+.btn-brown {
+    background: radial-gradient(circle at 30% 30%, #a1887f, #4e342e);
+    --btn-shadow: #26120b;
+}
+
+.btn-pink {
+    background: radial-gradient(circle at 30% 30%, #ff4081, #c2185b);
+    --btn-shadow: #880e4f;
+}
+
+.btn-yellow {
+    background: radial-gradient(circle at 30% 30%, #ffee58, #fbc02d);
+    --btn-shadow: #f57f17;
+}
+
+.btn-blue {
+    background: radial-gradient(circle at 30% 30%, #29b6f6, #0277bd);
+    --btn-shadow: #01579b;
+}
+
+/* Title Label */
+.instant-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+    margin-top: 8px;
+    height: 32px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* Action Icons Below Title */
+.instant-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.action-icon {
+    color: #29b6f6;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.1s;
+}
+
+.action-icon:hover {
+    transform: scale(1.2);
+}
+
+.action-icon.fav.active {
+    color: #e52d27;
+}
+
+@media (max-width: 500px) {
+    .instants-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 20px 10px;
+    }
+}

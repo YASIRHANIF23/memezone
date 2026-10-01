@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yasirhanif23.github.io/memezone/sitemap.xml
