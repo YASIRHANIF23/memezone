@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yasirhanif23.github.io/memezone/sitemap.xml
+Sitemap: https://memezone-self.vercel.app/sitemap.xml
